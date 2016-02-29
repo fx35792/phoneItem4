@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no, minimal-ui" />
+	<link rel="stylesheet" type="text/css" href="css/common/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<div id="m-body">
+		<div id="content">
+			<img src="images/common/logo.png" height="88" width="361" alt="logo"> 
+		</div>
+		<div class="Form_content">
+			<form action="" id="FomrValidation" method="post">
+				<p>
+					<label for="">姓名</label>
+					<input type="text" name="user" class="pubic" placeholder="输入您的真实姓名">
+				</p>
+				<p>
+					<label for="">手机号</label>
+					<input type="password" name="pass" class="pubic" placeholder="输入您的手机号码">
+				</p>
+				<p class="form1">
+					<a href="javascript:;" id="Vcode">获取验证码</a>
+				</p>
+				
+				<input type="text" maxlength="6" class="vcode" id="VcodeInput" placeholder="输入验证码" style="display:block;" >
+				<p class="form2">
+					<input type="submit" value="确认">
+				</p>	
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#Vcode").click(function(){
+				$("#VcodeInput").show();
+			});
+	</script>
+</body>
+</html>

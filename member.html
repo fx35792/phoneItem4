@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>报价单</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no, minimal-ui" />
+	<link rel="stylesheet" type="text/css" href="css/common/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/member.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+</head>
+<body>
+	<div id="m-body">
+		<div id="content">
+			<img src="images/photo.png" >
+		</div>
+		<div class="Form_content">
+			<form action="" id="FomrValidation" method="post">
+				<p>
+					<label for="">姓名</label>
+					<input type="text" name="name" class="pubic" placeholder="请输入您的真实姓名" value="">
+				</p>
+				<p>
+					<label for="">手机号</label>
+					<input type="text" name="phone" class="pubic" placeholder="请输入您的手机号码" value="">
+				</p>
+				<p>
+					<label for="">邮箱</label>
+					<input type="email" name="email" class="pubic" placeholder="未绑定" value="">
+				</p>
+				<p>
+					<label for="">身份证</label>
+					<input type="text" name="idcard" class="pubic" placeholder="未绑定" value="">
+				</p>
+				<p>
+					<label for="">银行卡</label>
+					<input type="text" name="bank_card" class="pubic" placeholder="未绑定">
+				</p>
+				<p>
+					<label for="">返佣金额</label>
+					<input type="text" name="pass" class="pubic" placeholder="&yen;0.00">
+				</p>
+				<p>
+					<label for="">总贷款额</label>
+					<input type="text" name="pass" class="pubic" placeholder="&yen;0.00">
+				</p>
+				<p>
+					<label for="">排名</label>
+					<input type="text" name="pass" class="pubic" placeholder="1987">
+				</p>
+				<div class="myorder">
+					<a href="">我的订单<span>&gt;</span></a>
+				</div>
+				<div class="submit" id="submit">
+					<input type="submit" value="提交">
+				</div>			
+					
+			</form>
+			<div class="notic">
+				<h2>郑重承诺</h2>
+				<p>我们会妥善保管、保密您的个人信息！</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var m_name=$("input[name='name']").val();
+			var m_phone=$("input[name='phone']").val();
+			var m_email=$("input[name='email']").val();
+			var m_idcard=$("input[name='idcard']").val();
+			var m_bank_addr=$("input[name='bank_addr']").val();
+			if(m_name==""||m_phone==""||m_email==""||m_idcard==""||m_bank_addr==""){
+				$("#submit").show();
+			}else{
+				$("#submit").hide();
+			}
+			
+		})
+	</script>
+</body>
+</html>

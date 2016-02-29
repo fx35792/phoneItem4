@@ -1,0 +1,31 @@
+/**注册**/
+#m-body{max-width: 640px;margin: auto;background: #f0f0f0;min-height: 480px;}
+#content{padding:50px 0px;text-align: center;border-bottom: 1px solid #cdcdcd;}
+#FomrValidation p{width:100%;height: 40px;line-height: 40px;border-bottom: 1px solid #cdcdcd;background: #fff;font-size: 12px;}
+#FomrValidation p label{width:28%;text-indent: 10px;display: inline-block;color:#333;}
+#FomrValidation p input.pubic{width:65%;height:38px;line-height: 38px;border: none;font-size: 14px;text-align: right;padding-right: 
+10px;}
+#FomrValidation p.form1{text-align: center;font-size: 17px;background: #10a8a5;}
+#FomrValidation p.form1 a{color: #fff;}
+
+#FomrValidation input.vcode{width:100%;height:38px;line-height: 38px;border: none;font-size: 14px;text-align: center;background: #fff;}
+
+#FomrValidation p.form2{margin-top:10px;}
+#FomrValidation p.form2 input{color: #fff;background: #dcdcdc;color: #fff;width: 100px;background: #dcdcdc;display: block;border: none;height: 40px;line-height: 40px;width: 100%;font-size: 17px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

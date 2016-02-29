@@ -1,0 +1,29 @@
+/**公共代码**/
+.m-description{padding:2% 2%;width:96%;}
+.m-des-part h2{font-size: 14px;font-weight: normal; color: #10a8a5;border-bottom: 2px solid #31E2DF;height: 30px;line-height: 30px;}
+.m-des-part1 .pro-desc{width:64%;padding:0% 18%;overflow: hidden;}
+.m-des-part1 .pro-desc p{margin:10% 0;height: 45px;line-height: 45px;overflow: hidden;}
+.m-des-part1 .pro-desc p img{float: left;}
+.m-des-part1 .pro-desc p span{float: right; width:65%;font-size: 16px;}
+.m-des-part2 .borrow-condition {padding:10px 0px;font-size: 12px;color: #333;}
+.m-des-part2 .borrow-condition p{line-height: 20px;font-size: 13px;}
+.m-des-part2 .borrow-condition table{width:100%;border:1px solid #ccc;}
+.m-des-part2 .borrow-condition table tr td{width:25%;text-align: center;border:1px solid #ccc;height: 30px;line-height: 30px;}
+.m-des-part2 .borrow-condition table tr td.color{width:25%;text-align: center;border:1px solid #ccc;height: 30px;line-height: 30px;color: #10a8a5;}
+/**车辆介绍 **/
+.m-des-part3 .work-flow p{line-height: 20px;margin:5px 0px;}
+.m-des-part3 .work-flow p i{display: block;font-size: 13px}
+
+/**公司介绍 **/
+.m-des-part3 .work-flow table{width:100%;border:1px solid #ccc;margin:10px 0px;}
+.m-des-part3 .work-flow table tr td{width:50%;text-align: center;border:1px solid #ccc;height: 30px;line-height: 30px;}
+.m-des-part3 .work-flow table tr td.title{text-align: left;font-size: 13px;}
+.m-des-part3 .work-flow table tr td.color{width:50%;text-align: center;border:1px solid #ccc;height: 30px;line-height: 30px;color: #10a8a5;}
+.m-des-part3 .work-flow table tr td.other{line-height: 20px;text-align: left;}
+
+/**常见问题**/
+.m-question h2{width:96%;padding:0 2%;font-size: 15px;height: 30px;line-height: 30px;background: #fff;margin:10px 0px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.m-question p{width:96%;padding:0 2%;line-height: 20px;}
+
+
+

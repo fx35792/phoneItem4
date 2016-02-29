@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>报价单</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no, minimal-ui" />
+	<link rel="stylesheet" type="text/css" href="css/common/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/quotation.css">
+	<link rel="stylesheet" type="text/css" href="css/diyUpload.css">
+	<link rel="stylesheet" type="text/css" href="css/webuploader.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+	<form action="" id="FomrValidation" method="post">
+	<div id="m-body">
+		<!--quotaion1-->
+		<div id="quotaion1" style="display:block;">
+			<div id="content">
+				<img src="images/quotation/liu1.png"  alt="liu2"> 
+			</div>
+			<div class="Form_content">
+				<div id="FomrValidation">
+					<p>
+						<label for="">贷款人姓名</label>
+						<input type="text" name="user" class="pubic" placeholder="请输入贷款人姓名">
+					</p>
+					<p>
+						<label for="">贷款人身份证</label>
+						<input type="password" name="pass" class="pubic" placeholder="请输入贷款人身份证号码">
+					</p>
+					<p>
+						<label for="">贷款类别</label>
+						<select id="choice_type">
+							<option value="0">请选择贷款类型</option>
+							<option value="1">房产抵押</option>
+							<option value="2">车辆抵押</option>
+							<option value="3">企业贷款</option>
+						</select>
+					</p>
+					<p>
+						<label for="">贷款金额</label>
+						<input type="tel" name="pass" class="pubic" placeholder="请输入贷款金额">
+					</p>				
+					<p class="form2">
+						<a href="javascript:;" id="quotation1_btn">下一步</a>
+					</p>	
+				</div>
+			</div>
+		</div>
+		<!--quotaion2-->
+		<div id="quotaion2" style="display:none">
+			<div id="content">
+				<img src="images/quotation/liu2.png"  alt="liu2"> 
+			</div>
+			<div class="Notes">
+				<span id="notes_content"></span>				
+			</div>
+			<div class="Form_content">
+				<div id="upload_img">
+				<!--
+					<div class="u-img">
+						<img src="images/quotation/default.png" />
+						<a href="javascript:;" class="up-close"></a>
+					</div>
+					<div class="u-img">
+						<img src="images/quotation/default.png" />
+						<a href="javascript:;" class="up-close"></a>
+					</div>
+					<div class="u-img">
+						<img src="images/quotation/default.png" />
+						<a href="javascript:;" class="up-close"></a>
+					</div>					
+					<div class="u-img">
+						<img id="ImgPr" width="107"  border="0" />
+						<a href="javascript:;" class="up-close"></a>	
+					</div>					
+				-->
+
+				</div>
+				<div class="upload_btn">
+					<a href="javascript:;" class="add_img" >添加图片</a>
+					<input type="file" id="upimg" multiple="multiple" onchange="javascript:setImagePreviews();" accept="image/*" />
+				</div>				
+			</div>
+			<div class="form2_liu">
+				<a href="javascript:;" id="quotation2_btn">上一步</a>
+				<a href="javascript:;" id="quotation2_btn1">下一步</a>
+			</div>
+		</div>
+		<!--quotaion3-->
+		<div id="quotaion3" style="display:none;">
+			<div id="content" style="border:none">
+				<img src="images/quotation/liu3.png"  alt="liu3"> 
+			</div>
+			<div class="Form_content1">
+				
+				恭喜您订单已提交，<br/>
+				审核后您将获得......
+			
+			</div>
+			<div class="quotation2_foot">
+				<a href="javascript:;" id="quotation3_btn" class="return">上一步</a>
+				<a href="" class="continue">继续下单</a>
+				<a href="" class="return">回到主站</a>
+			</div>
+		</div>
+	</div>
+	<form>
+<script>
+		$(function () {			
+			/******三个页面的切换******/
+			$("#quotation1_btn").click(function() {
+				
+				/**产品借贷类型**/	
+				var choice_typen = $('#choice_type option:selected').val();
+				if(choice_typen==1){
+					$("#notes_content").text("请上传：借款人（夫妇）身份证 借款人（夫妇）户口本 征信报告 结婚证 离婚证或法院判决书 房产证（要求无遮挡、涂改，可为复印件）");
+					$("#quotaion1").hide();
+					$("#quotaion2").fadeIn();
+				}else if(choice_typen==2){
+					$("#notes_content").text("请上传：照片包括身份证、行车执照、驾驶证、车辆登记证、购车发票（要求无遮挡、涂改，可为复印件)");
+					$("#quotaion1").hide();
+					$("#quotaion2").fadeIn();
+				}else if(choice_typen==3){
+					$("#notes_content").text("请上传：1、业执照副本、章程、法人和股东身份证 2、2013、2014、2015上半年真实财报、纳税记录、主要银行近半年流水单 3、房产证、土地证、股东征信报告、企业征信报告、企业情况说明 4、批贷函（资质好，无批贷函可以");
+					$("#quotaion1").hide();
+					$("#quotaion2").fadeIn();
+				}else{
+					//retrun false;
+					alert("请选择贷款类别");
+				}
+			});
+			$("#quotation2_btn").click(function() {
+				$("#quotaion2").hide();
+				$("#quotaion1").fadeIn();
+			});
+			$("#quotation2_btn1").click(function() {
+				$("#quotaion1").hide();
+				$("#quotaion2").hide();
+				$("#quotaion3").fadeIn();
+			});
+			$("#quotation3_btn").click(function() {
+				$("#quotaion1").hide();
+				$("#quotaion3").hide();
+				$("#quotaion2").fadeIn();
+			});
+			/**********图片上传***********/
+			
+			
+
+		});
+	
+</script>
+<script type="text/javascript">
+    //下面用于多图片上传预览功能
+    function setImagePreviews(avalue) {
+        var docObj = document.getElementById("upimg");
+        var dd = document.getElementById("upload_img");
+        dd.innerHTML = "";
+        var fileList = docObj.files;
+        for (var i = 0; i < fileList.length; i++) {            
+
+            dd.innerHTML += "<div style='position: relative;width: 32%;float: left;margin: 1px 2px;' > <img id='img" + i + "'  /> </div>";
+            var imgObjPreview = document.getElementById("img"+i); 
+            if (docObj.files && docObj.files[i]) {
+                //火狐下，直接设img属性
+                /*
+                imgObjPreview.style.display = 'block';
+                imgObjPreview.style.width = '30%';
+                imgObjPreview.style.height = '60px';
+                */
+                //imgObjPreview.src = docObj.files[0].getAsDataURL();
+                //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
+            }
+            else {
+                //IE下，使用滤镜
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                alert(imgSrc)
+                var localImagId = document.getElementById("img" + i);
+                //必须设置初始大小
+                localImagId.style.width = "30%";
+                localImagId.style.height = "60px";
+                //图片异常的捕捉，防止用户修改后缀来伪造图片
+                try {
+                    localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                }
+                catch (e) {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+        }  
+        return true;
+    } 
+</script>
+</script>
+</body>
+</html>

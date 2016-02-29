@@ -1,0 +1,25 @@
+/**报价单1**/
+#m-body{max-width: 640px;margin: auto;background: #f0f0f0;min-height: 480px;}
+.order_list .content{overflow: hidden;width:96%;padding:2% 2%;background: #fff;margin-bottom: 10px;}
+.order_list .content .left{float: left;width: 27%;margin-right: 2%;}
+.order_list .content .right{float: left;width:71%;text-align: left;line-height: 17px;font-size: 12px;}
+.order_list .content .right p span{color: #c00;}
+.order_list .content .right p.fir{overflow: hidden;}
+.order_list .content .right p.fir em{font-size: 14px;font-weight: normal;float: left;}
+.order_list .content .right p.fir span{font-size: 12px;color: #c2c2c2;float: right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
